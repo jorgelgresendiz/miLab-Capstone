@@ -41,7 +41,7 @@ class AddItemPage extends Component {
                     <div className="form-group">
                         <label>Item Name</label>
                         <input
-                            placeholder="Ex: T75 Flasks"
+                            placeholder="Enter lab item here"
                             className="form-control"
                             name="nameOfItem"
                             value={this.state.formData.nameOfItem}
@@ -52,7 +52,7 @@ class AddItemPage extends Component {
                     <div className="form-group">
                         <label>Quantity</label>
                         <input
-                            placeholder="Ex: 3"
+                            placeholder="Enter NUMBERS only"
                             className="form-control"
                             name="quantity"
                             value={this.state.formData.quantity}
@@ -63,7 +63,7 @@ class AddItemPage extends Component {
                     <div className="form-group">
                         <label>Comments</label>
                         <input
-                            placeholder="Ex: Please refill at 2"
+                            placeholder="Enter comments"
                             className="form-control"
                             name="comments"
                             value={this.state.formData.comments}

@@ -127,12 +127,9 @@ class App extends Component {
           />
         }
         />
-        <Route exact path="/details" render={() =>
+        <Route exact path="/details" render={({ location }) =>
           <ItemDetailPage
-            handleLogout={this.handleLogout}
-            user={this.state.user}
-            items={this.state.items}
-            handleDeleteItem={this.handleDeleteItem}
+            location={location}
           />
         }
         />
