@@ -4,11 +4,14 @@ const itemCtrl = require('../controllers/items');
 
 //Full CRUD for item model
 
+//view all items
+router.get('/', itemCtrl.index)
+
+// //view a single item
+// router.get('/:id', itemCtrl.show);
+
 //create a new item
 router.post('/', itemCtrl.create);
-
-//view a single card
-router.get('/', itemCtrl.index);
 
 //delete a single card
 router.delete('/:id', itemCtrl.delete);

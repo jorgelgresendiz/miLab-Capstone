@@ -1,20 +1,25 @@
 import React from 'react';
+import NavBar from '../../components/NavBar/NavBar'
 import ItemListItem from '../../components/ItemListItem/ItemListItem'
-// import { getAll } from '../../services/items-api';
+
 
 function ItemListPage(props) {
     return (
         <>
-            <h1>Item List</h1>
-            <div className='ItemListPage-grid'>
-                {props.items.map(item =>
-                    <ItemListItem
-                        item={item}
-                        handleDeleteItem={props.handleDeleteItem}
-                        key={item._id}
-                    />
-                )}
+            <div>
+                <NavBar
+                    user={props.user}
+                    handleLogout={props.handleLogout}
+                />
             </div>
+            <h1>My Inventory</h1>
+            {props.items.map(item =>
+                <ItemListItem
+                    item={item}
+                    key={item._id}
+                    handleDeleteItem={props.handleDeleteItem}
+                />
+            )}
         </>
     );
 }

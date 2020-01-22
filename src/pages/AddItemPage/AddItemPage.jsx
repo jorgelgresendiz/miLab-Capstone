@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import NavBar from '../../components/NavBar/NavBar'
 
 class AddItemPage extends Component {
     state = {
@@ -17,6 +18,7 @@ class AddItemPage extends Component {
     handleSubmit = e => {
         e.preventDefault();
         this.props.handleAddItem(this.state.formData);
+        console.log('handleSubmit')
     };
 
     handleChange = e => {
@@ -30,6 +32,10 @@ class AddItemPage extends Component {
     render() {
         return (
             <>
+                <div>
+                    <NavBar
+                    />
+                </div>
                 <h1>Add Item</h1>
                 <form ref={this.formRef} autoComplete="off" onSubmit={this.handleSubmit}>
                     <div className="form-group">

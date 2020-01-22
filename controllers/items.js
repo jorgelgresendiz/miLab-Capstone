@@ -13,7 +13,7 @@ async function create(req, res) {
     res.status(201).json(item)
 }
 
-
+//view all items
 async function index(req, res) {
     try {
         const items = await Item.find({});
@@ -24,6 +24,7 @@ async function index(req, res) {
     }
 }
 
+//delete a single item
 async function deleteItem(req, res) {
     try {
         await Item.findByIdAndDelete(req.params.id);
@@ -33,6 +34,7 @@ async function deleteItem(req, res) {
     }
 }
 
+//update a single item
 async function update(req, res) {
     try {
         await Item.findByIdAndUpdate(req.params.id, req.body);

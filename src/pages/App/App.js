@@ -2,11 +2,9 @@ import React, { Component } from 'react';
 import './App.css';
 import { Route } from 'react-router-dom'
 import { withRouter } from 'react-router';
-
 import * as itemAPI from '../../services/items-api';
-
-import SignupPage from '../SignupPage/SignupPage'
-import LoginPage from '../LoginPage/LoginPage'
+import SignupPage from '../SignupPage/SignupPage';
+import LoginPage from '../LoginPage/LoginPage';
 
 //has a form to add an item (CREATE)
 import AddItemPage from '../../pages/AddItemPage/AddItemPage'
@@ -15,8 +13,6 @@ import AddItemPage from '../../pages/AddItemPage/AddItemPage'
 import HomePage from '../HomePage/HomePage'
 
 //page to update and item created (UPDATE)
-
-
 import userService from '../../utils/userService';
 import ItemListPage from '../ItemListPage/ItemListPage';
 
@@ -84,10 +80,41 @@ class App extends Component {
         </header>
         <Route exact path="/" render={() =>
           <HomePage
+            handleAddItem={this.handleAddItem}
+            items={this.state.items}
+            handleSignupOrLogin={this.handleSignupOrLogin}
             handleLogout={this.handleLogout}
             user={this.state.user}
           />
         }
+        />
+        <Route exact path="/login" render={() =>
+          <LoginPage
+            handleAddItem={this.handleAddItem}
+            items={this.state.items}
+            handleSignupOrLogin={this.handleSignupOrLogin}
+            handleLogout={this.handleLogout}
+            user={this.state.user}
+          />
+        }
+        />
+        <Route exact path="/signup" render={() =>
+          <SignupPage
+            handleAddItem={this.handleAddItem}
+            items={this.state.items}
+            handleSignupOrLogin={this.handleSignupOrLogin}
+            handleLogout={this.handleLogout}
+            user={this.state.user}
+          />
+        }
+        />
+        <Route exact path="/additem" render={() => (
+          <AddItemPage
+            handleAddItem={this.handleAddItem}
+            items={this.state.items}
+            user={this.state.user}
+          />
+        )}
         />
         <Route exact path="/inventory" render={() =>
           <ItemListPage
@@ -97,27 +124,6 @@ class App extends Component {
             handleDeleteItem={this.handleDeleteItem}
           />
         }
-
-        />
-        <Route exact path="/login" render={() =>
-          <LoginPage
-            handleSignupOrLogin={this.handleSignupOrLogin}
-          />
-        }
-        />
-        <Route exact path="/signup" render={() =>
-          <SignupPage
-            handleSignupOrLogin={this.handleSignupOrLogin}
-
-          />
-        }
-        />
-        <Route exact path="/additem" render={() => (
-          <AddItemPage
-            handleAddItem={this.handleAddItem}
-            items={this.state.items}
-          />
-        )}
         />
       </div>
     )

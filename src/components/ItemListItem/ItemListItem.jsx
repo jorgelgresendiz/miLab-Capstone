@@ -5,7 +5,9 @@ function ItemListItem({ item, handleDeleteItem }) {
     return (
         <div className='panel panel-default'>
             <div className="panel-heading">
-                <h3 className='panel-title'>{item.name}</h3>
+                <h3 className='panel-title'>Item Name: {item.nameOfItem}</h3>
+                <h3 className='panel-title'>Quantity: {item.quantity}</h3>
+                <h3 className='panel-title'>Date Arrived: {item.dateOfArrival}</h3>
             </div>
             <div className='panel-footer ItemListItem-action-panel'>
                 <Link
