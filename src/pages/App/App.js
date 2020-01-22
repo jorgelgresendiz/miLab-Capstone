@@ -133,12 +133,10 @@ class App extends Component {
           />
         }
         />
-        <Route exact path="/edit" render={() =>
+        <Route exact path="/edit" render={({ location }) =>
           <ItemEditPage
-            handleLogout={this.handleLogout}
-            user={this.state.user}
-            items={this.state.items}
-            handleDeleteItem={this.handleDeleteItem}
+            handleUpdateItem={this.handleUpdateItem}
+            location={location}
           />
         }
         />

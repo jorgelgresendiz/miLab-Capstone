@@ -70,6 +70,7 @@ class ItemEditPage extends Component {
                         className="btn btn-xs"
                         disabled={this.state.invalidForm}
                     >
+
                         SAVE ITEM
             </button>&nbsp;&nbsp;
             <Link to='/'>CANCEL</Link>

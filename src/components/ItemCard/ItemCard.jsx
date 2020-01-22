@@ -11,14 +11,14 @@ function ItemCard({ item }) {
                 <dl>
                     <dt>Quantity</dt>
                     <dd>{item.quantity}</dd>
-                    <dt>Comments</dt>
-                    <dd>{item.comments}</dd>
                     <dt>Date of Arrival</dt>
                     <dd>{item.dateOfArrival}</dd>
+                    <dt>Comments</dt>
+                    <dd>{item.comments}</dd>
                 </dl>
             </div>
             <div className='panel-footer'>
-                <Link to='/'>Home</Link>
+                <Link to='/inventory'>Back to My Inventory</Link>
             </div>
         </div>
     );
