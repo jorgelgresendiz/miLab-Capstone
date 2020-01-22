@@ -28,12 +28,19 @@ function ItemListItem({ item, handleDeleteItem }) {
                 >
                     EDIT
         </Link>
+        <Link>
                 <button
                     className='btn btn-xs btn-danger margin-left-10'
+                    to={{
+                        pathname: '/edit',
+                        state: { item }
+                    }}
                     onClick={() => handleDeleteItem(item._id)}
                 >
                     DELETE
+                    
         </button>
+        </Link>
             </div>
         </div>
     );

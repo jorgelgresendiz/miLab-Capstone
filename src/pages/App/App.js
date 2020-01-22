@@ -5,6 +5,8 @@ import { withRouter } from 'react-router';
 import * as itemAPI from '../../services/items-api';
 import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
+import ItemDetailPage from '../ItemDetailPage/ItemDetailPage';
+import ItemEditPage from '../ItemEditPage/ItemEditPage';
 
 //has a form to add an item (CREATE)
 import AddItemPage from '../../pages/AddItemPage/AddItemPage'
@@ -118,6 +120,24 @@ class App extends Component {
         />
         <Route exact path="/inventory" render={() =>
           <ItemListPage
+            handleLogout={this.handleLogout}
+            user={this.state.user}
+            items={this.state.items}
+            handleDeleteItem={this.handleDeleteItem}
+          />
+        }
+        />
+        <Route exact path="/details" render={() =>
+          <ItemDetailPage
+            handleLogout={this.handleLogout}
+            user={this.state.user}
+            items={this.state.items}
+            handleDeleteItem={this.handleDeleteItem}
+          />
+        }
+        />
+        <Route exact path="/edit" render={() =>
+          <ItemEditPage
             handleLogout={this.handleLogout}
             user={this.state.user}
             items={this.state.items}
