@@ -21,32 +21,19 @@ Keeping track of every day lab items is a hassle. In my experience, going to the
 
 ## Wireframes
 
-Home page: ![Home Page][1]
+![Home-Page](https://i.imgur.com/AGzVx6I.png)
 
-[1]: 
+![Sign Up Page](https://i.imgur.com/35hkVSd.png) 
 
-Sign in Page: ![Sign in Page][2]
+![Login Page](https://i.imgur.com/ZPQlh2O.png) 
 
-[2]: 
+![Single card page](https://i.imgur.com/Prqnzmq.png) 
 
-Login Page: ![Login Page][3]
-
-[3]: 
-
-Single card page: ![Single card page][4]
-
-[4]: 
-
-Signed in page: ![Signed in page][5]
-
-[5]: 
-
-
+![Signed in page](https://i.imgur.com/6vNIKyb.png) 
 
 ### Deployed Link:
 
-[Heroku][1]
-1:
+https://milabcap.herokuapp.com/
 
 ## Technologies:
 
@@ -61,8 +48,7 @@ Signed in page: ![Signed in page][5]
 
 ## Planning
 
-[Trello board] [2]
-[2]: https://trello.com/b/5wjZy05h/milab
+https://trello.com/b/5wjZy05h/milab
 
 
 ## Future Enhancements 
