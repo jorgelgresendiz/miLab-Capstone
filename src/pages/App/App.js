@@ -43,7 +43,7 @@ class App extends Component {
     );
     this.setState(
       { items: newItemsArray },
-      () => this.props.history.push('/')
+      () => this.props.history.push('/inventory')
     );
   }
 
@@ -130,10 +130,11 @@ class App extends Component {
             />
           }
           />
-          <Route exact path="/edit" render={({ location }) =>
+          <Route exact path="/edit" render={({ location, history }) =>
             <ItemEditPage
               handleUpdateItem={this.handleUpdateItem}
               location={location}
+              history={history}
             />
           }
           />

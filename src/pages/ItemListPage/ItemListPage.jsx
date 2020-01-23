@@ -12,14 +12,16 @@ function ItemListPage(props) {
                     handleLogout={props.handleLogout}
                 />
             </div>
-            <h1>My Inventory</h1>
-            {props.items.map(item =>
-                <ItemListItem
-                    item={item}
-                    key={item._id}
-                    handleDeleteItem={props.handleDeleteItem}
-                />
-            )}
+            <div className="ItemListPage-grid">
+                <h1>My Inventory</h1>
+                {props.items.map(item =>
+                    <ItemListItem
+                        item={item}
+                        key={item._id}
+                        handleDeleteItem={props.handleDeleteItem}
+                    />
+                )}
+            </div>
         </>
     );
 }

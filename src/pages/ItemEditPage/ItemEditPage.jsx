@@ -4,14 +4,15 @@ import { Link } from 'react-router-dom';
 class ItemEditPage extends Component {
     state = {
         invalidForm: false,
-        formData: this.props.location.state.item
+        formData: this.props.location.state.item,
     };
 
     formRef = React.createRef();
 
-    handleSubmit = e => {
+    handleSubmit = async e => {
         e.preventDefault();
-        this.props.handleUpdateItem(this.state.formData);
+        await this.props.handleUpdateItem(this.state.formData);
+
     };
 
     handleChange = e => {
@@ -21,6 +22,7 @@ class ItemEditPage extends Component {
             invalidForm: !this.formRef.current.checkValidity()
         });
     };
+
 
     render() {
         return (
@@ -70,10 +72,9 @@ class ItemEditPage extends Component {
                         className="btn btn-xs"
                         disabled={this.state.invalidForm}
                     >
-
                         SAVE ITEM
             </button>&nbsp;&nbsp;
-            <Link to='/'>CANCEL</Link>
+            <Link to='/inventory'>CANCEL</Link>
                 </form>
             </>
         );

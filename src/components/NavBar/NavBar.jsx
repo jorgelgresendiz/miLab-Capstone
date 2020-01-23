@@ -23,9 +23,6 @@ const NavBar = (props) => {
             &nbsp;&nbsp;|&nbsp;&nbsp;
             <Link to='/signup' className='NavBar-link'>SIGN UP</Link>
             &nbsp;&nbsp;|&nbsp;&nbsp;
-            <Link to='/additem' className='NavBar-link'>ADD ITEM</Link>
-            &nbsp;&nbsp;|&nbsp;&nbsp;
-            <Link to='/inventory' className='NavBar-link'>MY INVENTORY</Link>
         </div>;
 
     return (
