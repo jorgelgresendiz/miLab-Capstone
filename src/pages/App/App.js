@@ -77,69 +77,73 @@ class App extends Component {
   render() {
     return (
       <div >
-        <header className='header-footer'>
-          miLab
-        </header>
-        <Route exact path="/" render={() =>
-          <HomePage
-            handleAddItem={this.handleAddItem}
-            items={this.state.items}
-            handleSignupOrLogin={this.handleSignupOrLogin}
-            handleLogout={this.handleLogout}
-            user={this.state.user}
+        <nav>
+          <header className='header-footer'>
+            miLab
+          </header>
+        </nav>
+        <main>
+          <Route exact path="/" render={() =>
+            <HomePage
+              handleAddItem={this.handleAddItem}
+              items={this.state.items}
+              handleSignupOrLogin={this.handleSignupOrLogin}
+              handleLogout={this.handleLogout}
+              user={this.state.user}
+            />
+          }
           />
-        }
-        />
-        <Route exact path="/login" render={() =>
-          <LoginPage
-            handleAddItem={this.handleAddItem}
-            items={this.state.items}
-            handleSignupOrLogin={this.handleSignupOrLogin}
-            handleLogout={this.handleLogout}
-            user={this.state.user}
+          <Route exact path="/login" render={() =>
+            <LoginPage
+              handleAddItem={this.handleAddItem}
+              items={this.state.items}
+              handleSignupOrLogin={this.handleSignupOrLogin}
+              handleLogout={this.handleLogout}
+              user={this.state.user}
+            />
+          }
           />
-        }
-        />
-        <Route exact path="/signup" render={() =>
-          <SignupPage
-            handleAddItem={this.handleAddItem}
-            items={this.state.items}
-            handleSignupOrLogin={this.handleSignupOrLogin}
-            handleLogout={this.handleLogout}
-            user={this.state.user}
+          <Route exact path="/signup" render={() =>
+            <SignupPage
+              handleAddItem={this.handleAddItem}
+              items={this.state.items}
+              handleSignupOrLogin={this.handleSignupOrLogin}
+              handleLogout={this.handleLogout}
+              user={this.state.user}
+            />
+          }
           />
-        }
-        />
-        <Route exact path="/additem" render={() => (
-          <AddItemPage
-            handleAddItem={this.handleAddItem}
-            items={this.state.items}
-            user={this.state.user}
+          <Route exact path="/additem" render={() => (
+            <AddItemPage
+              handleAddItem={this.handleAddItem}
+              items={this.state.items}
+              user={this.state.user}
+            />
+          )}
           />
-        )}
-        />
-        <Route exact path="/inventory" render={() =>
-          <ItemListPage
-            handleLogout={this.handleLogout}
-            user={this.state.user}
-            items={this.state.items}
-            handleDeleteItem={this.handleDeleteItem}
+          <Route exact path="/inventory" render={() =>
+            <ItemListPage
+              handleLogout={this.handleLogout}
+              user={this.state.user}
+              items={this.state.items}
+              handleDeleteItem={this.handleDeleteItem}
+            />
+          }
           />
-        }
-        />
-        <Route exact path="/details" render={({ location }) =>
-          <ItemDetailPage
-            location={location}
+          <Route exact path="/details" render={({ location }) =>
+            <ItemDetailPage
+              location={location}
+            />
+          }
           />
-        }
-        />
-        <Route exact path="/edit" render={({ location }) =>
-          <ItemEditPage
-            handleUpdateItem={this.handleUpdateItem}
-            location={location}
+          <Route exact path="/edit" render={({ location }) =>
+            <ItemEditPage
+              handleUpdateItem={this.handleUpdateItem}
+              location={location}
+            />
+          }
           />
-        }
-        />
+        </main>
       </div>
     )
   }

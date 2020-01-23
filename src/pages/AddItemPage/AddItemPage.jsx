@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import NavBar from '../../components/NavBar/NavBar'
 
+
 class AddItemPage extends Component {
     state = {
         invalidForm: true,
@@ -74,7 +75,8 @@ class AddItemPage extends Component {
                     <div className="form-group">
                         <label>Date of Arrival</label>
                         <input
-                            type="Date"
+                            type="date" data-date=""
+                            data-date-format="DD MMMM YYYY"
                             className="form-control"
                             name="dateOfArrival"
                             value={this.state.formData.dateOfArrival}
