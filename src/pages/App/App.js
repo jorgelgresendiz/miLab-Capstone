@@ -85,31 +85,25 @@ class App extends Component {
         <main>
           <Route exact path="/" render={() =>
             <HomePage
+              user={this.state.user}
               handleAddItem={this.handleAddItem}
               items={this.state.items}
               handleSignupOrLogin={this.handleSignupOrLogin}
               handleLogout={this.handleLogout}
-              user={this.state.user}
             />
           }
           />
-          <Route exact path="/login" render={() =>
+          <Route exact path="/login" render={({ history }) =>
             <LoginPage
-              handleAddItem={this.handleAddItem}
-              items={this.state.items}
               handleSignupOrLogin={this.handleSignupOrLogin}
-              handleLogout={this.handleLogout}
-              user={this.state.user}
+              history={history}
             />
           }
           />
-          <Route exact path="/signup" render={() =>
+          <Route exact path="/signup" render={({ history }) =>
             <SignupPage
-              handleAddItem={this.handleAddItem}
-              items={this.state.items}
+              history={history}
               handleSignupOrLogin={this.handleSignupOrLogin}
-              handleLogout={this.handleLogout}
-              user={this.state.user}
             />
           }
           />
