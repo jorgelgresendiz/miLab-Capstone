@@ -21,15 +21,30 @@ Keeping track of every day lab items is a hassle. In my experience, going to the
 
 ## Wireframes
 
+Home-Page:
 ![Home-Page](https://i.imgur.com/AGzVx6I.png)
 
+--
+
+Sign Up Page:
 ![Sign Up Page](https://i.imgur.com/35hkVSd.png) 
 
+--
+
+Login Page:
 ![Login Page](https://i.imgur.com/ZPQlh2O.png) 
 
+--
+
+Single card page:
 ![Single card page](https://i.imgur.com/Prqnzmq.png) 
 
+--
+
+Signed in page:
 ![Signed in page](https://i.imgur.com/6vNIKyb.png) 
+
+--
 
 ### Deployed Link:
 
